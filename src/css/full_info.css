@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Rubik-ExtraBold';
+  src: url("../fonts/RubikExtraBold.ttf"); }
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf"); }
+body {
+  background: #ffffff; }
+
+.btn {
+  line-height: 29px;
+  width: 200px; }
+
+.btn > a {
+  font-family: 'Rubik-SemiBold';
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  height: 20px; }
+
+button.full-info-btn {
+  border-radius: 4px;
+  border: none; }
+button a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Rubik-SemiBold'; }
+  button a:hover {
+    color: #ffffff; }
+
+/*# sourceMappingURL=full_info.css.map */

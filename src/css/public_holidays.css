@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Rubik-ExtraBold';
+  src: url("../fonts/RubikExtraBold.ttf"); }
+body {
+  background: #ffffff; }
+
+.btn {
+  line-height: 29px;
+  width: 200px; }
+
+.btn > a {
+  font-family: 'Rubik-SemiBold';
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  height: 20px; }
+
+/*# sourceMappingURL=public_holidays.css.map */

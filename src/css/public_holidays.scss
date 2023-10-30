@@ -1,0 +1,21 @@
+@import "_variables";
+@import "fonts";
+
+body{
+  background: $axpara-light;
+}
+
+.btn{
+  line-height: 29px;
+  width: 200px;
+}
+.btn > a{
+  font-family: 'Rubik-SemiBold';
+  text-decoration: none;
+  color: $axpara-light;
+  font-size: 16px;
+  height: 20px;
+}
+
+
+

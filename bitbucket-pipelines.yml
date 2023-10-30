@@ -1,0 +1,30 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy Staging
+          deployment: Staging
+          script:
+            - sed -i 's/version=1/version='${BITBUCKET_BUILD_NUMBER}'/g' src/*.html
+            - sed -i "/const API_URL/c\const API_URL = 'https://api.wonder.jazzserve.com';" ./src/js/*.js
+            - sed -i 's/UA-179274267-3/UA-179274267-2/g' src/*.html
+            - rsync -avh src/ cvdes-api@testing.jazzserve.com:/usr/share/cvdes-staging-axpara/
+
+      - step:
+          name: Deploy Production
+          image: atlassian/pipelines-awscli
+          trigger: manual
+          deployment: Production
+          script:
+            - sed -i 's/version=1/version='${BITBUCKET_BUILD_NUMBER}'/g' src/*.html
+            - sed -i "/const API_URL/c\const API_URL = 'https://api.axpara.com/api';" ./src/js/*.js
+            - sed -i 's/UA-179274267-3/UA-179274267-1/g' src/*.html
+            - aws s3 sync src/ s3://axpara.com --acl public-read --delete --cache-control max-age=0 --exclude "*" --include "*.html"
+            - aws s3 sync src/ s3://axpara.com --acl public-read --cache-control max-age=3600
+            - aws cloudfront create-invalidation --distribution-id EG8A0AWBXA623 --paths "/*"
+
+      - step:
+          name: Add build tag
+          script:
+            - git tag -am "Tagging for release ${BITBUCKET_BUILD_NUMBER}" release-${BITBUCKET_BUILD_NUMBER}
+            - git push origin release-${BITBUCKET_BUILD_NUMBER}

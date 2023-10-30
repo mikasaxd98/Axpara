@@ -1,0 +1,26 @@
+@import "_variables";
+@import "fonts";
+
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf"); }
+
+body{
+  background: $axpara-bg-page-color;
+}
+
+.btn{
+  line-height: 29px;
+  width: 200px;
+}
+.btn > a{
+  font-family: 'Rubik-SemiBold';
+  text-decoration: none;
+  color: $axpara-light;
+  font-size: 16px;
+  height: 20px;
+}
+
+
+

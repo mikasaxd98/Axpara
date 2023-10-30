@@ -1,0 +1,12 @@
+@import "variables";
+
+@mixin title-grey($fontSize, $opacity){
+  font-size: $fontSize;
+  text-transform: uppercase;
+  color: $axpara-dark-blue;
+  opacity: $opacity;
+}
+@mixin desc-under-title($fontSize, $opacity: 0){
+  font-size: $fontSize;
+  opacity: $opacity;
+}

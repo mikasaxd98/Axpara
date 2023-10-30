@@ -1,0 +1,1927 @@
+@import "_variables";
+@import "_mixins";
+
+/*700*/
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url("../fonts/Rubik-Bold.ttf");
+}
+
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf");
+}
+
+/*500*/
+@font-face {
+  font-family: 'Rubik-Medium';
+  src: url("../fonts/Rubik-Medium.ttf");
+}
+
+/*400*/
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url("../fonts/Rubik-Regular.ttf");
+}
+svg{
+  font-family: 'Rubik-Regular';
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.background_mobile {
+  background-color: black;
+  width: 17%;
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 9999999;
+  right: 50px;
+  left: -17%;
+}
+
+.sub_nav_logo {
+  padding-top: 100px !important;
+
+  img {
+    width: 100%;
+  }
+}
+
+.candidate_title_block {
+  .sub_nav_title {
+    display: flex;
+    justify-content: start;
+    margin: 0 44px;
+    font-family: 'Rubik-SemiBold';
+    font-size: 26px;
+  }
+}
+
+.candidate {
+  &_head_table {
+    margin: 40px 60px 0px 60px;
+
+    label {
+      color: $axpara-dark-blue;
+      opacity: 0.6;
+      font-size: 14px;
+      font-family: 'Rubik-SemiBold';
+      text-transform: uppercase;
+    }
+  }
+
+  &_description {
+    background-color: $axpara-light;
+    padding: 0 25px;
+    border-radius: 2px;
+    word-wrap: break-word;
+    margin: 5px 30px;
+    min-height: 120px;
+
+    .title {
+      a{
+        text-decoration: none;
+        opacity: 0.9;
+        color: black;
+      }
+      h5 {
+        padding: 15px 0;
+        font-family: 'Rubik-Regular';
+        margin: 0;
+        opacity: 0.8;
+      }
+    }
+
+    .desc {
+      a{
+        text-decoration: none;
+        opacity: 0.9;
+        color: black;
+      }
+      padding: 19px 0px;
+      @include desc-under-title(14px, 0.8);
+      font-family: 'Rubik-Regular';
+    }
+
+    .country {
+      padding: 14px 0px;
+
+      &_title {
+        @include title-grey(12px, 0.6);
+        font-family: 'Rubik-SemiBold';
+      }
+
+      &_desc {
+        @include desc-under-title(14px, 0.8);
+        font-family: 'Rubik-Regular';
+        padding-top: 5px;
+      }
+    }
+
+    .skills {
+      padding: 14px 0px;
+
+      &_title {
+        @include title-grey(12px, 0.6);
+        font-family: 'Rubik-SemiBold';
+      }
+
+      &_desc {
+        @include desc-under-title(14px, 0.8);
+        font-family: 'Rubik-Regular';
+        padding-top: 5px;
+      }
+    }
+
+    .experience_and_lang {
+      padding: 14px 0px;
+
+      .experience {
+        &_title {
+          @include title-grey(12px, 0.6);
+          font-family: 'Rubik-SemiBold';
+        }
+
+        &_desc {
+          @include desc-under-title(14px, 0.8);
+          font-family: 'Rubik-Regular';
+          padding-top: 5px;
+        }
+      }
+
+      .lang {
+        &_title {
+          @include title-grey(12px, 0.6);
+          font-family: 'Rubik-SemiBold';
+        }
+
+        &_desc {
+          @include desc-under-title(14px, 0.8);
+          font-family: 'Rubik-Regular';
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .action {
+      button {
+        width: 100%;
+        padding: 6px;
+        transition: 0.2s ease-out;
+      }
+    }
+  }
+}
+
+.jobs_title_block {
+  .sub_nav_title {
+    display: flex;
+    justify-content: start;
+    margin: 0 44px;
+    font-family: 'Rubik-SemiBold';
+    font-size: 26px;
+  }
+}
+
+.jobs {
+  &_table {
+    .col-12:last-child {
+      .jobs_description {
+        margin-bottom: 130px;
+      }
+    }
+  }
+
+  &_head_table {
+    margin: 40px 60px 0px 60px;
+
+    label {
+      color: $axpara-dark-blue;
+      opacity: 0.6;
+      font-size: 14px;
+      font-family: 'Rubik-SemiBold';
+      text-transform: uppercase;
+    }
+  }
+
+  &_description {
+    background-color: $axpara-light;
+    padding: 0 25px;
+    border-radius: 2px;
+    word-wrap: break-word;
+    margin: 5px 30px;
+    min-height: 120px;
+
+    .title {
+      h5 {
+        padding: 15px 0;
+        font-family: 'Rubik-Regular';
+        margin: 0;
+        opacity: 0.8;
+      }
+    }
+
+    .desc {
+      padding: 19px 0px;
+      @include desc-under-title(14px, 0.8);
+      font-family: 'Rubik-Regular';
+    }
+
+    .name {
+      padding: 14px 0px;
+
+      &_title {
+        @include title-grey(12px, 0.6);
+        font-family: 'Rubik-SemiBold';
+      }
+
+      &_desc {
+        @include desc-under-title(14px, 0.8);
+        font-family: 'Rubik-Regular';
+        padding-top: 5px;
+      }
+    }
+
+    .skills {
+      padding: 14px 0px;
+
+      &_title {
+        @include title-grey(12px, 0.6);
+        font-family: 'Rubik-SemiBold';
+      }
+
+      &_desc {
+        @include desc-under-title(14px, 0.8);
+        font-family: 'Rubik-Regular';
+        padding-top: 5px;
+      }
+    }
+
+    .experience_and_lang {
+      padding: 14px 0px;
+
+      .experience {
+        &_title {
+          @include title-grey(12px, 0.6);
+          font-family: 'Rubik-SemiBold';
+        }
+
+        &_desc {
+          @include desc-under-title(14px, 0.8);
+          font-family: 'Rubik-Regular';
+          padding-top: 5px;
+        }
+      }
+
+      .lang {
+        &_title {
+          @include title-grey(12px, 0.6);
+          font-family: 'Rubik-SemiBold';
+        }
+
+        &_desc {
+          @include desc-under-title(14px, 0.8);
+          font-family: 'Rubik-Regular';
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .action {
+      button {
+        width: 100%;
+        padding: 6px;
+        transition: 0.2s ease-out;
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          -webkit-transform: translateX(1px);
+          -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+          transform: translateY(1px);
+          transition: 0.2s ease-out;
+        }
+
+        a {
+          font-family: 'Rubik-SemiBold';
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.view_btn {
+  display: flex;
+  justify-content: center;
+  margin: 0px 30px 15px;
+
+  button {
+    width: 315px;
+
+    a {
+      line-height: 40px;
+    }
+  }
+}
+
+.we_offer {
+  background-color: $axpara-light;
+
+  .hire, .manage, .build {
+    &_img {
+      padding-top: 100px;
+    }
+
+    &_title {
+      font-size: 22px;
+      font-family: 'Rubik-SemiBold';
+      color: $axpara-dark-blue;
+      text-transform: uppercase;
+    }
+
+    &_desc {
+      @include desc-under-title(16px, 0.8);
+      min-height: 81px;
+    }
+  }
+
+  .link {
+    padding-bottom: 25px;
+    color: $axpara-primary;
+
+    a {
+      font-size: 16px;
+      font-family: 'Rubik-SemiBold';
+      text-decoration: none;
+    }
+  }
+}
+
+.talent_access {
+  background-color: $axpara-darker-blue;
+
+  &_title {
+    font-family: 'Rubik-SemiBold';
+    color: $axpara-grey-bg;
+    padding-left: 15px;
+    padding-right: 90px;
+
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  &_desc {
+    @include desc-under-title(16px, 0.8);
+    color: $axpara-bg-page-color;
+    font-family: 'Rubik-Regular';
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .talent {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &_location, &_skills {
+      select {
+        border-radius: 2px;
+        width: 100%;
+        height: 52px;
+        border: 2px solid $axpara-light;
+        color: $axpara-opacity-grey;
+        font-size: 14px;
+        font-family: 'Rubik-Regular';
+        padding-left: 18px;
+        -webkit-appearance: none;
+        background: url("../img/arrow_down.png") no-repeat 98% $axpara-light;
+
+      }
+    }
+
+    .email {
+      input {
+        border-radius: 2px;
+        width: 100%;
+        height: 52px;
+        border: 2px solid $axpara-light;
+        color: $axpara-dark-blue;
+        font-size: 14px;
+        font-family: 'Rubik-Regular';
+        padding-left: 18px;
+      }
+
+      &::placeholder {
+        color: $axpara-dark-blue;
+      }
+    }
+  }
+
+  .button {
+    padding: 0 15px 90px;
+
+    .btn {
+      width: 100%;
+
+      a {
+        line-height: 40px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.contact_us {
+  &.public_holiday {
+    .contact_us_telegram {
+      padding-bottom: 120px !important;
+    }
+  }
+
+  &.job_description_section {
+    background-color: $axpara-bg-page-color;
+  }
+
+  &_title {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+
+    h1 {
+      width: 350px;
+      color: $axpara_dark;
+      font-family: 'Rubik-SemiBold';
+      font-size: 32px;
+    }
+  }
+
+  .container {
+    button {
+      width: 100%;
+      line-height: 50px;
+    }
+
+    .contact_us_telegram {
+      padding-bottom: 70px;
+    }
+  }
+}
+
+.brands {
+  background-color: $axpara-light;
+
+  &_title {
+    padding-top: 55px;
+
+    h1 {
+      width: 50%;
+      color: $axpara_dark;
+      font-family: 'Rubik-SemiBold';
+      font-size: 32px;
+    }
+  }
+}
+
+.static_brands {
+  background-color: $axpara-light;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 23%;
+
+  &_title {
+    padding-top: 55px;
+
+    h1 {
+      width: 50%;
+      color: $axpara_dark;
+      font-family: 'Rubik-SemiBold';
+      font-size: 32px;
+    }
+  }
+
+  &_block {
+    .item {
+      height: 160px;
+      width: 18%;
+      margin: 4px 5px;
+    }
+  }
+}
+
+.countries {
+  background: url("../img/semicircle.png") no-repeat $axpara-primary;
+  background-size: contain;
+
+  .row {
+    margin: 0;
+  }
+
+  .text_block {
+    padding-top: 125px;
+    padding-left: 25px;
+
+    &_title {
+      h1 {
+        font-family: 'Rubik-SemiBold';
+        font-size: 38px;
+        color: $axpara-light;
+      }
+    }
+
+    &_desc {
+      color: $axpara-grey-bg;
+      font-family: 'Rubik-Medium';
+      font-size: 22px;
+    }
+
+  }
+
+  .time_block {
+    padding-top: 110px;
+    padding-bottom: 32px;
+
+    &_item {
+      background-color: $axpara-light;
+      box-shadow: 0px 4px 10px rgba(46, 52, 61, 0.2);
+      border-radius: 6px;
+      width: 90%;
+
+      .img-clock-block {
+        padding-right: 5%;
+      }
+
+      .clock {
+        background-color: #DAE7FF;
+        border-radius: 50%;
+
+        .wrap {
+          overflow: hidden;
+          position: relative;
+          height: 85px;
+          width: 85px;
+          border-radius: 100%;
+
+          .minute,
+          .hour {
+            position: absolute;
+            height: 20px;
+            width: 3px;
+            margin: auto;
+            top: -32%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: black;
+            transform-origin: bottom center;
+            transform: rotate(0deg);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            border-radius: 15px;
+          }
+
+          .hour {
+            opacity: 0.8;
+          }
+
+          .minute {
+            position: absolute;
+            height: 35px;
+            width: 3px;
+            top: -46%;
+            left: 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+            transform: rotate(90deg);
+            background-color: #E9605A;
+          }
+
+        }
+      }
+
+      .desc {
+        margin-left: 8px;
+
+        .text {
+          color: $axpara-dark-blue;
+          font-family: 'Rubik-SemiBold';
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        .time {
+          color: $axpara-dark-blue;
+          opacity: 0.6;
+          font-size: 16px;
+          font-family: 'Rubik-Regular';
+        }
+      }
+    }
+  }
+}
+
+.map {
+  background-color: $axpara-darker-blue;
+  position: relative;
+
+  .spotify-playlist{
+    z-index: 120;
+    position: absolute;
+    right: 45px;
+    bottom: 10px;
+  }
+
+  .zoom_buttons {
+    z-index: 120;
+    position: absolute;
+    right: 45px;
+    top: 5%;
+    border: 1px solid $axpara-primary;
+    border-radius: 3px;
+
+    #zoom_in, #zoom_out {
+      background-color: $axpara-darker-blue;
+      width: 25px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        color: $axpara-light;
+        font-weight: bold;
+      }
+    }
+
+    #zoom_in {
+      border-bottom: 3px solid $axpara-primary;
+    }
+  }
+
+  .text-block {
+    text-align: right;
+    top: 6%;
+    z-index: 100;
+    position: absolute;
+    right: 150px;
+
+    h3 {
+      color: $axpara-primary;
+      font-size: 22px;
+      font-family: 'Rubik-Medium';
+      margin: 0 !important;
+    }
+
+    .sub_title {
+      font-size: 32px;
+      font-family: 'Rubik-Medium';
+      color: $axpara-light;
+    }
+  }
+}
+
+.clients_feedback {
+  background-color: $axpara-light;
+
+  .feedback_block {
+    &_title {
+      padding-top: 65px;
+      font-family: 'Rubik-SemiBold';
+      font-size: 48px;
+      color: $axpara_dark;
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    &_desc {
+      padding-top: 21px;
+
+      span {
+        color: $axpara-dark-blue;
+        opacity: 0.8;
+        font-family: 'Rubik-Regular';
+        font-size: 16px;
+
+        strong {
+          font-family: 'Rubik-Bold';
+          color: $axpara-primary;
+          opacity: 0.8;
+
+        }
+      }
+    }
+  }
+
+  .cards_block {
+    padding: 60px 0 92px 0;
+
+    .card_item {
+      &_img {
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      &_name {
+        font-family: 'Rubik-Medium';
+        font-size: 22px;
+        color: $axpara-darker-blue;
+        padding-bottom: 10px;
+        line-height: 26px;
+      }
+
+      &_position {
+        font-size: 16px;
+        font-family: 'Rubik-Regular';
+        color: $axpara-darker-blue;
+        opacity: 0.3;
+      }
+
+      &_desc {
+        font-size: 15px;
+        color: $axpara-darker-blue;
+        font-family: 'Rubik-Regular';
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.team {
+  max-height: 765px;
+
+  &.job_description_section {
+    background-color: $axpara-grey-bg;
+  }
+
+  &_block {
+    &_title {
+      padding-top: 90px;
+
+      h1 {
+        font-size: 48px;
+        font-family: 'Rubik-SemiBold';
+        color: $axpara_dark;
+      }
+    }
+
+    &_desc {
+      padding-top: 17px;
+      font-size: 20px;
+      font-family: 'Rubik-Regular';
+      opacity: 0.8;
+
+      span {
+        width: 50%;
+      }
+    }
+
+    &_img {
+      padding-top: 30px;
+
+      img {
+        width: 90%;
+
+        &.img_desktop {
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+.understanding_markets {
+  background-color: $axpara-light;
+  padding-top: 23%;
+
+  &_block {
+    &_title {
+      h1 {
+        width: 550px;
+        font-family: 'Rubik-SemiBold';
+        font-size: 48px;
+        color: $axpara-dark;
+      }
+    }
+
+    &_desc {
+      span {
+        font-family: 'Rubik-Regular';
+        font-size: 16px;
+        color: $axpara-dark-blue;
+        opacity: 0.8;
+        width: 550px;
+      }
+    }
+
+    .cards_block {
+      padding-bottom: 160px;
+
+      .item {
+        border: 1px solid $axpara-border-color;
+        border-radius: 6px;
+        height: 450px;
+        width: 340px;
+
+        &_title {
+          width: 165px;
+
+          h3 {
+            font-family: 'Rubik-Medium';
+            color: $axpara-darker-blue;
+            font-size: 22px;
+            line-height: 35px;
+          }
+        }
+
+        &_desc {
+          font-family: 'Rubik-Regular';
+          font-size: 14px;
+          color: $axpara-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+.hire_and_manage_talent {
+  background-color: $axpara-light;
+
+  &_block {
+    .img_block {
+      &.d-block {
+        .img_4 {
+          padding: 3.1rem 0.25rem;
+        }
+      }
+
+      &.d-none {
+        .img_4 {
+          padding: 3.8rem 0.25rem;
+        }
+      }
+
+      .img_9 {
+        margin-top: -30px;
+      }
+
+      .img_6 {
+        padding: 3.7rem 0.25rem;
+      }
+
+      .img_2 {
+        padding: 2rem 0.25rem;
+      }
+
+      img {
+        border-radius: 25px;
+      }
+    }
+
+    .text_block {
+      .title {
+        width: 525px;
+
+        h1 {
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-dark;
+          font-size: 48px;
+        }
+      }
+
+      .link {
+        color: $axpara-primary;
+
+        a {
+          font-size: 16px;
+          font-family: 'Rubik-SemiBold';
+          text-decoration: none;
+        }
+      }
+
+      .desc {
+        width: 480px;
+
+        span {
+          font-family: 'Rubik-Regular';
+          color: $axpara-dark-blue;
+          font-size: 20px;
+          opacity: 0.8;
+        }
+      }
+
+      .desc_care {
+        width: 540px;
+
+        span {
+          font-family: 'Rubik-Regular';
+          color: $axpara-dark-blue;
+          font-size: 20px;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .last_row {
+      padding-bottom: 6rem !important;
+    }
+  }
+}
+
+.public_holiday {
+  padding-top: 100px;
+  margin: 0px 12px;
+
+  .block {
+    padding-top: 45px;
+
+    &_title {
+      h1 {
+        color: $axpara-dark;
+        font-size: 48px;
+        font-family: 'Rubik-SemiBold';
+      }
+    }
+  }
+}
+
+.countries_flags {
+  .block {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.table_calendar {
+  .block {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .header {
+      padding: 4px 12px;
+    }
+
+    .header_item {
+      span {
+        font-size: 14px;
+        color: $axpara-dark-blue;
+        opacity: 0.6;
+        font-family: 'Rubik-SemiBold';
+      }
+    }
+
+    .content_table {
+      .border-bottom-line {
+        border-bottom: 1px solid $axpara-dark-blue;
+        opacity: 0.2;
+      }
+
+      &.block {
+        padding: 4px 18px;
+
+        .item {
+          background-color: $axpara-bg-page-color;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+          border-radius: 2px;
+
+          .month, .day {
+            font-size: 16px;
+            color: $axpara-dark-blue;
+            font-family: 'Rubik-Regular';
+            opacity: 0.8;
+          }
+
+          .holiday {
+            font-size: 20px;
+            color: $axpara-dark-blue;
+            font-family: 'Rubik-Regular';
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.job {
+  max-width: 1200px;
+  margin: 90px auto 150px;
+
+  &.block {
+    margin: 0px 12px;
+
+    .item {
+      border: 1px solid #C7D9F8;
+      box-sizing: border-box;
+      border-radius: 6px;
+
+      &_title {
+        min-height: 115px;
+        font-size: 20px;
+        color: $axpara-dark-blue;
+        font-family: 'Rubik-SemiBold';
+      }
+
+      &_btn {
+        button {
+          font-size: 16px;
+          font-family: 'Rubik-SemiBold';
+          width: 160px;
+          line-height: 35px;
+        }
+      }
+    }
+
+  }
+}
+
+.job_description {
+  padding-top: 100px;
+  margin: 0px 12px;
+
+  .block {
+    padding-top: 45px;
+
+    &_title {
+      h1 {
+        color: $axpara-dark;
+        font-size: 48px;
+        font-family: 'Rubik-SemiBold';
+      }
+    }
+  }
+}
+
+/*End job descriptions*/
+footer {
+  padding: 115px 115px 60px 115px;
+  background-color: $axpara-darker-blue;
+
+  .left_block {
+    .desc {
+      padding-left: 20px;
+
+      span {
+        color: $axpara-primary;
+        font-family: 'Rubik-SemiBold';
+        font-size: 16px;
+      }
+    }
+
+    .img {
+      height: 50px;
+    }
+  }
+
+  .right_block {
+    a {
+      text-decoration: none;
+      font-family: 'Rubik-Regular';
+      opacity: 0.8;
+      font-size: 16px;
+      color: $axpara-light;
+
+    }
+  }
+
+  hr {
+    color: $axpara-bg-page-color;
+  }
+
+  .sub_title {
+    padding-left: 20px;
+
+    span {
+      color: $axpara-light;
+      opacity: 0.8;
+      font-size: 12px;
+      font-family: 'Rubik-Regular';
+    }
+  }
+}
+
+.talent_video {
+  .block {
+    padding-top: 100px;
+
+    .video {
+      #video {
+        video {
+          max-width: 100%;
+          border-radius: 8px;
+          max-height: 350px;
+        }
+      }
+    }
+  }
+}
+
+.full_info {
+  margin-top: 100px;
+
+  .close {
+    border: none !important;
+    background: none !important;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .title_block {
+    padding: 34px 20px 16px;
+
+    .img {
+      img {
+        width: 18px;
+        filter: grayscale(80%);
+      }
+    }
+
+    .title {
+      font-family: 'Rubik-SemiBold';
+      color: $axpara-dark;
+      font-size: 18px;
+      padding-left: 10px;
+      color: $axpara-full-info-color;
+    }
+  }
+
+  .wrap {
+    margin: 20px;
+
+    .order_title {
+      border-bottom: 1px solid;
+      padding-bottom: 20px;
+      border-color: rgba(48, 57, 72, .2);
+
+      &_text {
+        h3 {
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-primary;
+          margin: 0;
+        }
+
+        .employer-name {
+          color: $axpara-full-info-color;
+          font-family: 'Rubik-SemiBold';
+          font-size: 20px;
+        }
+      }
+
+      &_button {
+        button {
+          width: 100px;
+          height: 38px;
+        }
+      }
+    }
+
+    .container {
+      margin-top: 20px;
+
+      .section {
+        margin-bottom: 26px;
+
+        &_title {
+          margin-bottom: 6px;
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-full-info-color;
+        }
+
+        .description {
+          font-size: 16px;
+          opacity: 0.8;
+          font-family: 'Rubik-Regular';
+
+          button {
+            background: none;
+            border: none;
+            color: $axpara-primary;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.apply {
+  margin-top: 100px;
+
+  .container {
+    max-width: 900px;
+  }
+
+  .title_block {
+    padding: 34px 20px 16px;
+
+    .img {
+      img {
+        width: 18px;
+        filter: grayscale(80%);
+      }
+    }
+
+    .title {
+      font-family: 'Rubik-SemiBold';
+      color: $axpara-dark;
+      font-size: 18px;
+      padding-left: 10px;
+      color: $axpara-full-info-color;
+    }
+  }
+
+  .wrap {
+    margin: 20px;
+
+    .apply_title {
+      border-bottom: 1px solid;
+      padding-bottom: 20px;
+      border-color: rgba(48, 57, 72, .2);
+
+      &_text {
+        h3 {
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-primary;
+          margin: 0;
+        }
+
+        .employer-name {
+          font-size: 16px;
+          opacity: 0.8;
+          font-family: 'Rubik-Regular';
+        }
+      }
+
+      &_button {
+        button {
+          width: 100px;
+          height: 38px;
+        }
+      }
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    input, select {
+      border: 1px solid rgba(48, 57, 72, .5);
+      height: 46px;
+      line-height: 44px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: rgba(48, 57, 72, .8);
+      padding: 0 10px 0 16px;
+      width: 100%;
+      background: 0 0;
+      outline: none;
+    }
+
+    .form-group {
+      &.has-error {
+        input, select {
+          border: 1px solid $axpara-error;
+        }
+
+        button {
+          &.custom-btn {
+            border: 1px solid $axpara-error !important;
+          }
+        }
+      }
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: rgba(48, 57, 72, .8);;
+    }
+
+    form {
+      label {
+        font-family: 'Rubik-SemiBold';
+        color: rgba(48, 57, 72, 0.8);
+      }
+
+      .upload-cv {
+        position: relative;
+        border-radius: 4px;
+        border: 1px dashed rgba(48, 57, 72, .5);
+        border-image-slice: 2;
+        padding: 66px 40px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &.has-error {
+          border: 1px solid $axpara-error;
+        }
+
+        input {
+          left: 0;
+          top: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          opacity: 0;
+        }
+
+        .upload-icon {
+          background: #ebeced;
+          width: 87px;
+          height: 87px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          margin-bottom: 14px;
+
+          img {
+            width: 32px;
+          }
+        }
+
+        .max-size-file {
+          font-size: 12px;
+          line-height: 14px;
+          color: rgba(48, 57, 72, .6);
+          margin-bottom: 20px;
+          font-family: 'Rubik-SemiBold';
+        }
+
+        .choose-file {
+          margin-bottom: 10px;
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-primary;
+        }
+      }
+
+      .upload-cv-mob {
+        &.has-error {
+          button {
+            border: 1px solid $axpara-error;
+          }
+        }
+
+        input {
+          opacity: 0;
+          position: absolute;
+          z-index: -1;
+          width: 0px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      button {
+        &.custom-btn {
+          background-color: $axpara-light;
+          width: 100%;
+          border-radius: 4px;
+          height: 46px;
+
+          &:focus {
+            outline: none !important;
+            box-shadow: none !important;;
+            background-color: $axpara-light;
+          }
+
+          border-color: rgba(48, 57, 72, 0.5);
+          font-size: 16px;
+          color: rgba(48, 57, 72, 0.8);
+          font-family: 'Rubik-Regular';
+        }
+      }
+
+      .dropdown-menu {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+              color: rgba(48, 57, 72, 0.8);
+              font-family: 'Rubik-Regular';
+            }
+          }
+        }
+      }
+    }
+
+    .help-block {
+      display: none !important;
+    }
+  }
+}
+
+.success {
+  margin-top: 100px;
+
+  .container {
+    max-width: 450px;
+  }
+
+  .message_block {
+    .status_img {
+      border-radius: 50%;
+      width: 112px;
+      height: 112px;
+      background: $axpara-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 40px;
+
+      img {
+        width: 54px;
+      }
+    }
+
+    .title {
+      color: $axpara-primary;
+      font-family: 'Rubik-SemiBold';
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      font-family: 'Rubik-Regular';
+      font-size: 16px;
+    }
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+}
+.modal-first-enter{
+  .close{
+    background-color: $axpara-light;
+    border: none;
+  }
+  .modal-body{
+    .text_block {
+      .title {
+        width: 100%;
+
+        h1 {
+          font-family: 'Rubik-SemiBold';
+          color: $axpara-dark;
+          font-size: 32px;
+        }
+      }
+
+      .link {
+        color: $axpara-primary;
+
+        a {
+          font-size: 16px;
+          font-family: 'Rubik-SemiBold';
+          text-decoration: none;
+        }
+      }
+
+      .desc {
+        width: 480px;
+
+        span {
+          font-family: 'Rubik-Regular';
+          color: $axpara-dark-blue;
+          font-size: 16px;
+          opacity: 0.8;
+        }
+      }
+
+      .desc_care {
+        width: 540px;
+
+        span {
+          font-family: 'Rubik-Regular';
+          color: $axpara-dark-blue;
+          font-size: 20px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+.cookie_banner{
+  .cookie_container{
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: $axpara-light;
+    padding: 0 32px;
+
+    transition: 400ms;
+
+    &.a{
+      color: $axpara-light;
+      font-family: 'Rubik-SemiBold';
+    }
+    .cookie_btn{
+      margin-bottom: 16px;
+      width: 150px;
+    }
+
+    &.active{
+      bottom: 0;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .team {
+    max-height: 100%;
+
+    &.job_description_section {
+      .team_block {
+        &_title {
+          h1 {
+            font-size: 32px;
+          }
+        }
+
+        &_desc {
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .countries {
+    background: $axpara-primary;
+  }
+  .understanding_markets {
+    padding-top: 7%;
+
+    &_block {
+      .cards_block {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .hire_and_manage_talent {
+    &_block {
+      .img_block {
+        img {
+          border-radius: 20px;
+        }
+      }
+
+      .text_block {
+        .title {
+          width: 100%;
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+
+        .desc, .desc_care {
+          width: 100%;
+
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .public_holiday {
+    .block {
+      &_title {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  .countries_flags {
+    .block {
+      .flag_card {
+        padding: 20px 15px;
+
+        &_img {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .job {
+    max-width: 1200px;
+    margin: 50px auto 30px;
+  }
+
+  .talent_access {
+    &_title {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+  .job_description {
+    .block {
+      &_title {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  footer {
+    .left_block {
+      .desc {
+        padding-left: 0;
+      }
+    }
+
+    .sub_title {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .team {
+    &_block {
+      &_img {
+        padding-top: 90px;
+      }
+    }
+  }
+
+  .talent_access {
+    .left_block {
+      padding-top: 70px;
+    }
+  }
+}
+
+@media (max-width: 615px) {
+
+  .team {
+    &_block {
+      &_desc {
+        span {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 360px) {
+
+  .hire_and_manage_talent {
+    background-color: $axpara-light;
+
+    &_block {
+      .img_block {
+        .img_1, .img_2, .img_3, .img_4, .img_5, .img_6, .img_7, .img_8, .img_9 {
+          padding: 1px !important;
+        }
+
+        .img_2 {
+          padding-top: 2rem !important;
+        }
+
+        .img_5 {
+          padding-top: 0 !important;
+        }
+
+        .img_4, .img_6 {
+          padding-top: 2rem !important;
+        }
+
+        .img_7 {
+          padding-top: 0 !important;
+        }
+
+        .img_8 {
+          padding-top: 2rem !important;
+        }
+
+        .img_9 {
+          margin-top: -15px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  footer {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content_table {
+    &.block {
+      padding: 4px 32px !important;
+
+      .item {
+        .holiday {
+          font-size: 16px !important;
+          color: $axpara-dark-blue;
+          font-family: 'Rubik-Regular';
+          opacity: 0.8;
+        }
+      }
+
+      hr {
+        margin: 0;
+      }
+    }
+  }
+  .countries {
+    .text_block {
+      &_title {
+        h1 {
+          font-family: 'Rubik-SemiBold';
+          font-size: 62px !important;
+          color: $axpara-light;
+        }
+      }
+    }
+
+    .time_block {
+      padding-bottom: 110px;
+    }
+  }
+  .contact_us {
+    &_title {
+      h1 {
+        width: 600px;
+        font-size: 48px;
+      }
+    }
+
+    .container {
+      button {
+        a {
+          font-family: 'Rubik-SemiBold';
+          padding: 16px 30px;
+        }
+      }
+
+      .contact_us_whatsapp {
+        padding-bottom: 70px;
+      }
+    }
+  }
+  .brands {
+    &_title {
+      padding-top: 90px;
+
+      h1 {
+        font-family: 'Rubik-SemiBold';
+        font-size: 48px;
+      }
+    }
+
+    .empty_block {
+      margin-top: 125px !important;
+    }
+  }
+
+  .static_brands {
+    &_title {
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    &_block {
+      .item {
+        height: 160px;
+        width: 18%;
+        margin: 4px 5px;
+      }
+    }
+  }
+  .sub_nav_logo {
+    margin: 0 100px;
+  }
+
+  .candidate {
+    margin: 0 55px;
+  }
+
+  .candidate_title_block {
+    margin: 0 55px;
+  }
+
+  .jobs {
+    margin: 0 55px 5px 55px;
+  }
+
+  .jobs_title_block {
+    margin: 120px 55px 0 55px;
+  }
+
+  .team {
+    &_block {
+      &_img {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .public_holiday {
+    .block {
+      padding-top: 75px;
+    }
+  }
+  .job_description {
+    .block {
+      padding-top: 75px;
+    }
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .we_offer {
+    .hire, .manage, .build {
+      &_desc {
+        min-height: 104px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .talent_access {
+    &_img {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .left_block {
+      padding-top: 180px;
+    }
+  }
+
+  .countries {
+    .text_block {
+      padding-left: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .registerForm {
+    button {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .map {
+    .text-block {
+      text-align: left;
+      top: 5%;
+      z-index: 100;
+      position: absolute;
+      right: 0;
+      left: 45px;
+      max-width: 185px;
+    }
+
+    .map-mobile-z-index {
+      position: absolute;
+      z-index: 110;
+    }
+
+  }
+}

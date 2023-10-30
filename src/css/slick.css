@@ -1,0 +1,93 @@
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf"); }
+.slick-list {
+  overflow: hidden; }
+
+.slick-track {
+  display: flex;
+  align-items: center; }
+
+.slider {
+  position: relative;
+  padding: 0 40px; }
+  .slider_item_img {
+    display: flex;
+    justify-content: center;
+    padding: 25px; }
+  .slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 14px;
+    height: 30px;
+    margin: -30px 30px 0px 30px;
+    border: none; }
+  .slider .slick-prev {
+    color: red;
+    left: 0;
+    background: url("../img/arrow-left.png") 0 0 no-repeat; }
+  .slider .slick-next {
+    right: 0;
+    background: url("../img/arrow-right.png") 0 0 no-repeat; }
+  .slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .slider .slick-dots li {
+      list-style: none;
+      margin: 0 3px; }
+      .slider .slick-dots li.slick-active button {
+        background-color: #2C8AFF;
+        opacity: 1; }
+    .slider .slick-dots button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #0D131D;
+      border-radius: 50%;
+      border: 0px solid #0D131D;
+      opacity: 0.3; }
+
+.slider_countries {
+  margin: 0px 12px; }
+  .slider_countries_item {
+    cursor: pointer;
+    min-width: 140px !important;
+    margin: 4px; }
+    .slider_countries_item.current_element {
+      background-color: #2C8AFF; }
+      .slider_countries_item.current_element .slider_countries_item_text span {
+        color: #ffffff; }
+    .slider_countries_item.element {
+      display: flex;
+      border-radius: 6px;
+      box-shadow: 0px 4px 10px rgba(46, 52, 61, 0.2);
+      padding: 12px;
+      align-items: center; }
+    .slider_countries_item_img img {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      border: 1px solid #707376; }
+    .slider_countries_item_text {
+      padding: 0 12px; }
+      .slider_countries_item_text span {
+        font-size: 12px;
+        color: #303948;
+        font-family: 'Rubik-SemiBold'; }
+  @media (min-width: 992px) {
+    .slider_countries .slider_countries_item_img img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+    .slider_countries .slider_countries_item_text {
+      padding: 0 12px; }
+      .slider_countries .slider_countries_item_text span {
+        font-size: 18px;
+        color: #303948;
+        font-family: 'Rubik-SemiBold'; } }
+
+/*# sourceMappingURL=slick.css.map */

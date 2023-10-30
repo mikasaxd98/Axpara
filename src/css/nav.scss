@@ -1,0 +1,217 @@
+@import "_variables";
+
+/*700*/
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url("../fonts/Rubik-Bold.ttf");
+}
+
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf");
+}
+
+.navbar {
+  background-color: $axpara-light;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  width: 300px;
+  background-color: #ffffff;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-family: 'Rubik-Bold';
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.55);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler-icon {
+    background-image: url('../img/burger_menu_lines.png') !important;
+  }
+
+  .navbar-collapse {
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    background-color: $axpara-light;
+    margin-left: 50px;
+    left: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    transition: all 0.4s ease;
+    display: block;
+
+    .navbar-nav {
+      li {
+        font-family: 'Rubik-Bold';
+        font-size: 20px;
+      }
+    }
+  }
+  .navbar-collapse.collapsing {
+    height: 100% !important;
+    margin-left: 50%;
+    left: 50%;
+    transition: all 0.2s ease;
+  }
+  .navbar-collapse.show {
+    height: 100%;
+    left: 0;
+  }
+
+  .nav-item {
+    padding: 0px 33px;
+  }
+  .buttons {
+    padding-left: 20px;
+    font-family: 'Rubik-SemiBold';
+
+    button {
+      height: 50px;
+    }
+  }
+
+}
+
+@media (min-width: 977px) and (max-width: 1393px) {
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        .talent-login {
+          label:after {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 977px) and (max-width: 1376px) {
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        .client-login {
+          label:after {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 977px) and (max-width: 1300px) {
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        .open-jobs {
+          label:after {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 977px) and (max-width: 1200px) {
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        .open-jobs, .client-login, .talent-login {
+          label:after {
+            margin-top: 27px;
+          }
+        }
+        .home-page, .resources {
+          label:after {
+            margin-top: 37px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 977px) {
+
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        &.nav-item {
+          padding: 0 4px;
+          width: 20%;
+          &.home{
+            max-width: 15%;
+          }
+        }
+        font-family: 'Rubik-Bold';
+        font-size: 14px;
+        color: $axpara-dark-blue;
+
+        a {
+          position: relative;
+
+          label {
+            cursor: pointer;
+          }
+        }
+
+        label:after {
+          display: block;
+          margin-top: 20px;
+          position: absolute;
+          left: 0;
+          width: 0;
+          height: 5px;
+          background-color: $axpara-primary;
+          content: "";
+          transition: width 0.3s ease-out;
+        }
+
+        label:hover:after,
+        label:focus:after {
+          width: 100%;
+        }
+
+      }
+
+      .nav-link {
+         padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0 75px;
+  }
+
+  .buttons {
+    button {
+      height: 50px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import "_variables";
+
+/*600*/
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  src: url("../fonts/Rubik-SemiBold.ttf");
+}
+
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  padding: 0 40px;
+
+  &_item{
+    &_img{
+      display: flex;
+      justify-content: center;
+      padding: 25px;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 14px;
+    height: 30px;
+    margin: -30px 30px 0px 30px;
+    border: none;
+  }
+  .slick-prev {
+    color: red;
+    left: 0;
+    background: url("../img/arrow-left.png") 0 0 no-repeat;
+  }
+  .slick-next {
+    right: 0;
+    background: url("../img/arrow-right.png") 0 0 no-repeat;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style: none;
+      margin: 0 3px;
+      &.slick-active {
+        button {
+    background-color: $axpara-primary;
+          opacity: 1;
+        }
+      }
+    }
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background-color: $axpara-darker-blue;
+      border-radius: 50%;
+      border: 0px solid $axpara-darker-blue;
+      opacity: 0.3;
+    }
+  }
+}
+
+.slider_countries {
+  margin: 0px 12px;
+  &_item{
+    cursor: pointer;
+    min-width: 140px!important;
+    margin: 4px;
+    &.current_element{
+      background-color: $axpara-primary;
+      .slider_countries_item_text{
+        span{
+          color:$axpara-light;
+        }
+      }
+    }
+    &.element{
+      display: flex;
+      border-radius: 6px;
+      box-shadow: 0px 4px 10px rgba(46, 52, 61, 0.2);
+      padding: 12px;
+      align-items: center;
+    }
+    &_img{
+      img{
+       border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #707376;
+      }
+    }
+    &_text{
+      padding: 0 12px;
+      span{
+        font-size: 12px;
+        color: $axpara-dark-blue;
+        font-family: 'Rubik-SemiBold';
+      }
+    }
+  }
+
+  @media (min-width: 992px)  {
+    .slider_countries {
+      &_item {
+        &_img {
+          img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        &_text {
+          padding: 0 12px;
+          span {
+            font-size: 18px;
+            color: $axpara-dark-blue;
+            font-family: 'Rubik-SemiBold';
+          }
+        }
+      }
+    }
+  }
+}
